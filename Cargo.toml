@@ -1,0 +1,19 @@
+[package]
+name = "rust-playground"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+twox-hash = "2.0.1"
+rand = "0.8.5"
+criterion = "0.5.1"
+
+[dependencies.xxhash-rust]
+version = "0.8.12"
+features = ["xxh3", "const_xxh3"]
+
+[profile.dev]
+lto = true
+opt-level = 3
+incremental = false
+codegen-units = 1
